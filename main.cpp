@@ -49,10 +49,28 @@ void arrayPointer(){
         }
     }
 }
+void dynamicArrays(){
+    int size;
+    cout<<"Please give the size of array: "<<endl;
+    cin>>size;
+    int* myArray = new int[size];
+    for(int i=0; i<size;i++){
+        cout<<"myArray["<<i<<"] = ";
+        cin>>myArray[i];
+    }
+    for(int i=0;i<size;i++){
+        cout<<myArray[i];
+        if(i<size-1)
+        cout<<", ";
+    }
+    delete[]myArray;
+    myArray=NULL;
+}
 int main() {
     basicOfPointers();
     usingVoidFunctionToReturnValueBasedByPointer();
     arrayPointer();
+    dynamicArrays();
     system("pause>0");
 }
 
